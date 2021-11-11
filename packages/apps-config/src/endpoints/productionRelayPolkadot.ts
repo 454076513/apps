@@ -86,13 +86,23 @@ export function createPolkadot (t: TFunction): EndpointOption {
         }
       },
       {
-        info: 'crust',
+        info: 'crustParachain',
         homepage: 'https://crust.network',
         paraId: 2008,
         isUnreachable: true,
         text: t('rpc.polkadot.crust', 'Crust', { ns: 'apps-config' }),
         providers: {
           Crust: 'wss://rpc.crust.network'
+        }
+      },
+      {
+        info: 'darwinia',
+        isUnreachable: true, // https://github.com/polkadot-js/apps/issues/6530
+        homepage: 'https://darwinia.network/',
+        paraId: 2003,
+        text: t('rpc.polkadot.darwinia', 'Darwinia', { ns: 'apps-config' }),
+        providers: {
+          Darwinia: 'wss://parachain-rpc.darwinia.network'
         }
       },
       {
@@ -134,6 +144,25 @@ export function createPolkadot (t: TFunction): EndpointOption {
         text: t('rpc.polkadot.parallel', 'Parallel', { ns: 'apps-config' }),
         providers: {
           Parallel: 'wss://rpc.parallel.fi'
+        }
+      },
+      {
+        info: 'subdao',
+        homepage: 'https://subdao.network/',
+        paraId: 2018,
+        isUnreachable: true,
+        text: t('rpc.polkadot.subdao', 'SubDAO', { ns: 'apps-config' }),
+        providers: {
+          SubDAO: 'wss://parachain-rpc.subdao.org'
+        }
+      },
+      {
+        info: 'subgame',
+        homepage: 'http://subgame.org/',
+        paraId: 2017,
+        text: t('rpc.polkadot.subgame', 'SubGame Gamma', { ns: 'apps-config' }),
+        providers: {
+          SubGame: 'wss://gamma.subgame.org/'
         }
       }
     ]

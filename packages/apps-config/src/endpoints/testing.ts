@@ -21,7 +21,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       info: 'aleph',
       text: t('rpc.test.aleph', 'Aleph Zero Testnet', { ns: 'apps-config' }),
       providers: {
-        'Aleph Zero Foundation': 'wss://test-api.alephzero.org'
+        'Aleph Zero Foundation': 'wss://ws.test.azero.dev'
       }
     },
     {
@@ -152,6 +152,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
     },
     {
       info: 'fantour',
+      isDisabled: true, // https://github.com/polkadot-js/apps/issues/6519
       text: t('rpc.test.fantour', 'Fantour', { ns: 'apps-config' }),
       providers: {
         FantourDev: 'wss://test-ws.fantour.io'
@@ -414,6 +415,13 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       text: t('rpc.test.sora-substrate-staging', 'SORA-staging', { ns: 'apps-config' }),
       providers: {
         Soramitsu: 'wss://ws.stage.sora2.soramitsu.co.jp'
+      }
+    },
+    {
+      info: 'subdao',
+      text: t('rpc.test.subdao', 'SubDAO Staging', { ns: 'apps-config' }),
+      providers: {
+        SubDAO: 'wss://alpha.subdao.org'
       }
     },
     {

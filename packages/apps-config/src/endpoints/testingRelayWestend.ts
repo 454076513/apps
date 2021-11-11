@@ -101,9 +101,19 @@ export function createWestend (t: TFunction): EndpointOption {
         }
       },
       {
+        info: 'pangoro',
+        isUnreachable: true, // https://github.com/polkadot-js/apps/issues/6530
+        homepage: 'https://darwinia.network/',
+        paraId: 2102,
+        text: t('rpc.westend.pangoro', 'Pangoro', { ns: 'apps-config' }),
+        providers: {
+          Darwinia: 'wss://pangoro-parachain-rpc.darwinia.network'
+        }
+      },
+      {
         info: 'westendPichiu',
         homepage: 'https://kylin.network/',
-        paraId: 2104,
+        paraId: 2106,
         text: t('westend.kylin-node.co.uk', 'Pichiu', { ns: 'apps-config' }),
         providers: {
           'Kylin Network': 'wss://westend.kylin-node.co.uk'
